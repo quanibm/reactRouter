@@ -6,19 +6,22 @@
 ### 组件解释
 1.  BrowserRouter : 创建URL
 ```
-> <BrowserRouter />
-> http://example.com/about
+ <BrowserRouter />
+ http://example.com/about
 ```
 2.  HashRouter: 创建URL
 ```
-> <BrowserRouter />
-> http://example.com/#/about
+ <BrowserRouter />
+ http://example.com/#/about
 ```
 3.  Route : 路由显示什么组件,显示在什么位置,它有三个props用来定义渲染内容:
  - component
  - render
  - children
-4.  switch : The <Switch> is not required for grouping <Route>s, but it can be quite useful. A <Switch> will iterate over all of its children <Route> elements and only render the first one that matches the current location. This helps when multiple route’s paths match the same pathname, when animating transitions between routes, and in identifying when no routes match the current location (so that you can render a “404” component).
+4.  switch : The <Switch> is not required for grouping <Route>s, but it can be quite useful. A <Switch> will iterate over all of its children <Route> elements and only render the first one that matches the current location. This helps when multiple route’s paths match the same pathname, when animating transitions between routes, and in identifying when no routes match the current location (so that you can render a “404” component).=>{
+	1. switch 将迭代所有route子元素,仅渲染与当前位置匹配的第一个子元素.
+	1. 当没有路径与当前位置匹配的时候就选择没有设置path  **props**  的组件进行渲染.(这样的功能可以实现404的效果)
+	}
 5.  Link : a 链接作用, to 属性不能少.
 6.  NavLink : 一个特殊版本<Link>，它将在与当前URL匹配时为渲染元素添加样式属性。
 7.  Redirect : 当`<Redirect>`被使用的时候,它会将当前url导入他的to值指向的url组件.
